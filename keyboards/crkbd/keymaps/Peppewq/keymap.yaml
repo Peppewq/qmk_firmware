@@ -4,10 +4,10 @@ layout:
     qmk_keyboard: corne_rotated
     qmk_layout: LAYOUT_split_3x6_3
 layers:
-    DEF:
-        - ["\\", Q, W, E, R, T, Y, U, I, O, P, BSpace]
+    BASE:
+        - [ESC, Q, W, E, R, T, Y, U, I, O, P, BSpace]
         - [Tab, A, S, D, F, G, H, J, K, L, Ñ, "* +"]
-        - [Shift, Z, X, C, V, B, N, M, ", ;", ". :", "_ -", Shift]
+        - [Shift, Z, X, C, V, B, N, M, "; ,", ": .", "- _", Shift]
         - {t: Ctrk}
         - {t: Alt}
         - {t: "Cmd"}
@@ -16,8 +16,8 @@ layers:
         - {t: "Mo(1)", type: ghost}
         - {t: Enter}
     ADV:
-        - ["º ª", "!", "\"", "#", "$", "%", "&", "/", "(", ")", "=", "?"]
-        - ["< >", 1,  2, 3, 4, 5, "|", Up, "[", "]", "{", "}"]
+        - ["º ª", "!", "@ \"", "#", "$", "%", "&", "\\ /", "(", ")", "=", "?"]
+        - ["> <", 1,  2, 3, 4, 5, "|", Up, "[", "]", "{", "}"]
         - [Shift, 6, 7, 8, 9, 0, Left, Down, Right, "`", "'", "´"]
         - {type: ghost}
         - {type: ghost}
@@ -26,5 +26,6 @@ layers:
         - {type: ghost}
         - {t: Enter}
 
-combos:
-    - {p: [1, 2], k: "ESC", l: ["DEF"]}
+#COMBOS definition
+#combos:
+#  - {p: [1, 2], k: "ESC", l: ["DEF"]}

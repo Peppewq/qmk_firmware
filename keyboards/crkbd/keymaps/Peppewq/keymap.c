@@ -11,9 +11,11 @@ ALGR(ES_LABK) \
 ES_SLSH       /
 ES_NTIL       Ñ
 ES_LABK       ºª
+ES_DQUO       "
 ES_GRV        `
 ES_QUOT       '
 ES_ACUT       ´
+ALGR(ES_2)    @
 */
 
 
@@ -71,10 +73,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 // When Shift + /(slash) ==> \ (backslash)
 const key_override_t backslash_key_override = ko_make_basic(MOD_MASK_SHIFT, ES_SLSH, ALGR(ES_LABK));
+// When Alt + " ==> @
+const key_override_t at_key_override = ko_make_basic(MOD_MASK_ALT, ES_DQUO, ALGR(ES_2));
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &delete_key_override,
     &backslash_key_override,
+    &at_key_override,
     NULL // Null terminate the array of overrides!
 };
 
